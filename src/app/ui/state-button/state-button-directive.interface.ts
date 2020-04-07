@@ -1,6 +1,6 @@
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs';
 import { ButtonState } from './button-state';
 
 export interface IStateButtonDirective {
-  state: BehaviorSubject<ButtonState>;
+  state: Observable<ButtonState>;
 }

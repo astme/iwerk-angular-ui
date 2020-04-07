@@ -1,3 +1,209 @@
+# [7.0.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v6.1.0...v7.0.0) (2019-11-22)
+
+
+* feat(angular): upgrade to Angular 8 ([735867d](https://github.com/interfacewerk/iwerk-angular-ui/commit/735867d))
+
+
+### Features
+
+* **package:** add popover directive to public api ([2245cda](https://github.com/interfacewerk/iwerk-angular-ui/commit/2245cda))
+
+
+### BREAKING CHANGES
+
+* upgrade to Angular 8
+
+# [6.1.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v6.0.0...v6.1.0) (2019-06-18)
+
+
+### Bug Fixes
+
+* **fontawesome:** this version 0.4.0 is broken ([9eb7536](https://github.com/interfacewerk/iwerk-angular-ui/commit/9eb7536))
+
+
+### Features
+
+* **movable/handle:** the handle has a iw-move-handle class ([de2956b](https://github.com/interfacewerk/iwerk-angular-ui/commit/de2956b))
+
+# [6.0.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v5.0.1...v6.0.0) (2019-06-17)
+
+
+### Bug Fixes
+
+* **popover:** the popover now adds a CSS class to the body ([b3e2b7b](https://github.com/interfacewerk/iwerk-angular-ui/commit/b3e2b7b)), closes [#195](https://github.com/interfacewerk/iwerk-angular-ui/issues/195)
+* **popover:** the popover scroll mask prevents whole body scrolling ([09aa0c1](https://github.com/interfacewerk/iwerk-angular-ui/commit/09aa0c1))
+
+
+### BREAKING CHANGES
+
+* **popover:** Developers must add the exported iwerk-angular-ui css stylesheet when using the
+popover.
+
+## [5.0.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v5.0.0...v5.0.1) (2019-06-14)
+
+
+### Bug Fixes
+
+* **movable:** fix issue where text was selected when dragging and page could scroll ([6c05392](https://github.com/interfacewerk/iwerk-angular-ui/commit/6c05392))
+
+# [5.0.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v4.0.1...v5.0.0) (2019-05-16)
+
+
+### Features
+
+* **movable:** add moved output ([824cfec](https://github.com/interfacewerk/iwerk-angular-ui/commit/824cfec))
+* **movable:** introduce Movable module ([83a2ce4](https://github.com/interfacewerk/iwerk-angular-ui/commit/83a2ce4))
+
+
+### BREAKING CHANGES
+
+* **movable:** We introduce a whole new module.
+
+## [4.0.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v4.0.0...v4.0.1) (2019-05-04)
+
+
+### Bug Fixes
+
+* **docs:** do not install new scripts and replace import ([fe35e04](https://github.com/interfacewerk/iwerk-angular-ui/commit/fe35e04))
+
+# [4.0.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.17.3...v4.0.0) (2019-05-03)
+
+
+### Bug Fixes
+
+* **popover:** put popover container and arrow element as siblings of scroll mask ([977588c](https://github.com/interfacewerk/iwerk-angular-ui/commit/977588c))
+
+
+### Features
+
+* **popover:** add rightWithRight alignment option ([15d2907](https://github.com/interfacewerk/iwerk-angular-ui/commit/15d2907))
+
+
+### BREAKING CHANGES
+
+* **popover:** The DOM structure changes: the container and the arrow are no longer children of
+the scroll mask
+
+## [3.17.3](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.17.2...v3.17.3) (2019-04-14)
+
+
+### Bug Fixes
+
+* **docs:** fix docs deploy ([5032f71](https://github.com/interfacewerk/iwerk-angular-ui/commit/5032f71))
+
+## [3.17.2](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.17.1...v3.17.2) (2019-04-14)
+
+
+### Bug Fixes
+
+* **docs:** fix for docs online ([b946cf8](https://github.com/interfacewerk/iwerk-angular-ui/commit/b946cf8))
+
+## [3.17.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.17.0...v3.17.1) (2019-03-28)
+
+
+### Bug Fixes
+
+* **ellipsis:** fix error where an exception was thrown when truncated event was used ([ee4c9b2](https://github.com/interfacewerk/iwerk-angular-ui/commit/ee4c9b2))
+
+# [3.17.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.16.0...v3.17.0) (2019-03-25)
+
+
+### Bug Fixes
+
+* **docs/code:** fix copy button position ([2a5663c](https://github.com/interfacewerk/iwerk-angular-ui/commit/2a5663c))
+* **docs/search:** fix style of search input ([3f09a8d](https://github.com/interfacewerk/iwerk-angular-ui/commit/3f09a8d))
+* **popover:** fix issue where popover does not position correctly ([ac297c5](https://github.com/interfacewerk/iwerk-angular-ui/commit/ac297c5))
+
+
+### Features
+
+* **docs:** add Get Started page link ([ea3a8ae](https://github.com/interfacewerk/iwerk-angular-ui/commit/ea3a8ae))
+* **docs/code-line:** introduce code-line component ([06cf9e9](https://github.com/interfacewerk/iwerk-angular-ui/commit/06cf9e9))
+
+# [3.16.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.15.1...v3.16.0) (2019-03-24)
+
+
+### Features
+
+* **tree:** introduce the tree component ([ca1d4b7](https://github.com/interfacewerk/iwerk-angular-ui/commit/ca1d4b7))
+
+## [3.15.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.15.0...v3.15.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* **tooltip:** make tooltip go away after scrolling ([d1b7d71](https://github.com/interfacewerk/iwerk-angular-ui/commit/d1b7d71))
+
+# [3.15.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.14.0...v3.15.0) (2019-03-09)
+
+
+### Features
+
+* **docs:** add search feature ([f1a9f86](https://github.com/interfacewerk/iwerk-angular-ui/commit/f1a9f86))
+* **docs:** introduce docs project ([7d5d012](https://github.com/interfacewerk/iwerk-angular-ui/commit/7d5d012))
+
+# [3.14.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.13.0...v3.14.0) (2019-03-06)
+
+
+### Features
+
+* **navigation:** implement navigation component ([5db0e4f](https://github.com/interfacewerk/iwerk-angular-ui/commit/5db0e4f))
+
+# [3.13.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.12.0...v3.13.0) (2019-01-09)
+
+
+### Features
+
+* **angular:** upgrade to Angular 7 ([13b0f08](https://github.com/interfacewerk/iwerk-angular-ui/commit/13b0f08))
+
+# [3.12.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.11.0...v3.12.0) (2018-11-10)
+
+
+### Bug Fixes
+
+* **multiline-ellipsis:** export module in public api ([b231113](https://github.com/interfacewerk/iwerk-angular-ui/commit/b231113))
+
+
+### Features
+
+* **multiline-ellipsis:** implement multi-line ellipsis feature ([#92](https://github.com/interfacewerk/iwerk-angular-ui/issues/92)) ([f0a6279](https://github.com/interfacewerk/iwerk-angular-ui/commit/f0a6279))
+
+# [3.11.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.10.0...v3.11.0) (2018-11-10)
+
+
+### Features
+
+* **multiline-ellipsis:** implement multi-line ellipsis feature ([#92](https://github.com/interfacewerk/iwerk-angular-ui/issues/92)) ([#93](https://github.com/interfacewerk/iwerk-angular-ui/issues/93)) ([954e80a](https://github.com/interfacewerk/iwerk-angular-ui/commit/954e80a))
+
+# [3.10.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.9.0...v3.10.0) (2018-11-05)
+
+
+### Features
+
+* **angular:** update to Angular 6 ([#78](https://github.com/interfacewerk/iwerk-angular-ui/issues/78)) ([d075081](https://github.com/interfacewerk/iwerk-angular-ui/commit/d075081))
+
+# [3.9.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.8.1...v3.9.0) (2018-10-10)
+
+
+### Features
+
+* **angular:** update to Angular 6 ([#78](https://github.com/interfacewerk/iwerk-angular-ui/issues/78)) ([#79](https://github.com/interfacewerk/iwerk-angular-ui/issues/79)) ([7f646c6](https://github.com/interfacewerk/iwerk-angular-ui/commit/7f646c6))
+
+## [3.8.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.8.0...v3.8.1) (2018-10-10)
+
+
+### Bug Fixes
+
+* **checkbox:** fix write value that does not trigger change detection ([#76](https://github.com/interfacewerk/iwerk-angular-ui/issues/76)) ([9c7967c](https://github.com/interfacewerk/iwerk-angular-ui/commit/9c7967c))
+* **state-button:** do not expose a behavior subject ([#77](https://github.com/interfacewerk/iwerk-angular-ui/issues/77)) ([e7a6525](https://github.com/interfacewerk/iwerk-angular-ui/commit/e7a6525))
+
+# [3.8.0](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.7.0...v3.8.0) (2018-09-17)
+
+
+### Features
+
+* **tooltip:** add delay option ([#71](https://github.com/interfacewerk/iwerk-angular-ui/issues/71)) ([c7f3cfa](https://github.com/interfacewerk/iwerk-angular-ui/commit/c7f3cfa))
+
 ## [3.6.1](https://github.com/interfacewerk/iwerk-angular-ui/compare/v3.6.0...v3.6.1) (2018-09-14)
 
 

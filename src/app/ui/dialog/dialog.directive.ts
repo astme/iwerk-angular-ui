@@ -1,13 +1,29 @@
 import { Directive, TemplateRef, Input, OnDestroy } from '@angular/core';
 import { DialogService, IDialog } from './dialog.service';
 
+/**
+ * The dialog component is meant to focus user's attention on one particular task or content.
+ * It is displayed on top of the rest.
+ ```ts
+ import { DialogModule } from 'iwerk-angular-ui';
+ ```
+ */
 @Directive({
   selector: '[iwDialog]',
   exportAs: 'iw-dialog'
 })
 export class DialogDirective implements OnDestroy {
+  /**
+   * User can press Escape to close the dialog.
+   */
   @Input() escToClose: boolean;
+  /**
+   * User can click outside of the dialog to close it.
+   */
   @Input() clickToClose: boolean;
+  /**
+   * A class that is added to the container.
+   */
   @Input() containerClass: string;
 
   private __dialogInstance: IDialog;
@@ -17,6 +33,9 @@ export class DialogDirective implements OnDestroy {
     private templateRef: TemplateRef<any>
   ) { }
 
+  /**
+   * @ignore
+   */
   ngOnDestroy() {
     if (this.__dialogInstance) {
       this.__dialogInstance.close();
@@ -24,6 +43,9 @@ export class DialogDirective implements OnDestroy {
     }
   }
 
+  /**
+   * Open the dialog.
+   */
   open() {
     if (this.__dialogInstance) {
       return;
@@ -40,6 +62,9 @@ export class DialogDirective implements OnDestroy {
     });
   }
 
+  /**
+   * Close the dialog.
+   */
   close() {
     if (this.__dialogInstance) {
       this.__dialogInstance.close();

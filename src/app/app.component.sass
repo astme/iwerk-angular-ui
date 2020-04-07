@@ -1,0 +1,27 @@
+$width_aside: 200px
+
+\:host
+  display: flex
+  flex-direction: row
+  position: relative
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+
+  aside
+    flex: 0 0 auto
+    height: 100%
+    width: $width_aside
+    overflow: auto
+    background: black
+    color: white
+    padding: 15px 0px
+
+    &.closed
+      display: none
+
+  main
+    flex: 1 1
+    height: 100%
+    overflow: auto
+    padding: 15px

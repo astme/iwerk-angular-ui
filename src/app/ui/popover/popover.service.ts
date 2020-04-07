@@ -7,7 +7,6 @@ import {
   ApplicationRef,
   EmbeddedViewRef,
   Type,
-  ReflectiveInjector,
   Optional,
   Inject
 } from '@angular/core';
@@ -32,7 +31,8 @@ class PopoverImpl implements IPopover {
     private appRef: ApplicationRef,
     private componentRef: ComponentRef<any>,
     private container: ComponentRef<PopoverContainerComponent>,
-    private scrollMask: ComponentRef<PopoverScrollMaskComponent>
+    private scrollMask: ComponentRef<PopoverScrollMaskComponent>,
+    private arrowElement: HTMLElement
   ) {
 
   }
@@ -50,6 +50,7 @@ class PopoverImpl implements IPopover {
       this.componentRef.destroy();
       this.appRef.detachView(this.componentRef.hostView);
     }
+    this.arrowElement.remove();
     this.appRef.detachView(this.container.hostView);
     this.appRef.detachView(this.scrollMask.hostView);
     this.container.destroy();
@@ -92,7 +93,7 @@ export class PopoverService {
   }
 
   open<T>(componentType: Type<T>, target: HTMLElement, options?: PopoverOptions, init?: (component: T) => void): IPopover {
-    const reflInj = ReflectiveInjector.resolveAndCreate([Popover], this.injector);
+    const reflInj = Injector.create([{provide: Popover, deps: []}], this.injector);
 
     const factory = this.componentFactoryResolver.resolveComponentFactory(componentType);
     const component = factory.create(reflInj);
@@ -132,7 +133,7 @@ export class PopoverService {
       .create(this.injector, componentRef ? [[componentRef.location.nativeElement]] : [embeddedViewRef.rootNodes]);
     // create the mask component
     const scrollMask = this.componentFactoryResolver.resolveComponentFactory(PopoverScrollMaskComponent)
-      .create(this.injector, [[container.location.nativeElement, arrowElement]]);
+      .create(this.injector);
 
     // we bind to the output (which is an observable)
     scrollMask.instance.clickOutsideToClose = options.clickOutsideToClose;
@@ -167,7 +168,8 @@ export class PopoverService {
       this.appRef,
       componentRef,
       container,
-      scrollMask
+      scrollMask,
+      arrowElement
     );
   }
 
@@ -187,6 +189,8 @@ export class PopoverService {
       addClasses(container, options.popoverClass);
       addClasses(scrollMask, options.scrollMaskClass);
       addClasses(arrowElement, options.arrowClass);
+      document.body.appendChild(container);
+      document.body.appendChild(arrowElement);
       document.body.appendChild(scrollMask);
 
       smartPosition(elements, options);
